@@ -1,0 +1,8 @@
+.container{
+    max-width: 950px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/button";
