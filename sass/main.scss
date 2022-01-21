@@ -1,0 +1,16 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'MuseoModerno', cursive;  
+}
+
+*{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;  
+}
+	
+
+@import "mixins";
+@import "variables";
+@import "general";
+@import "media";
