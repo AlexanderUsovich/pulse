@@ -2,6 +2,10 @@
     .container{
         padding: 0 15px;
     }
+    .advantages__items{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 @media (max-width: 767px){
     html{
@@ -11,19 +15,45 @@
         width: 190px;
     }
     .button{
-        width: 130px;
-        height: 25px;
+        &_call{
+            width: 130px;
+            height: 25px;
+        }
+        &_main{
+            width: 250px;
+        }
     }
+   
     .promo{
         &__icons{
             height: 95px;
+            width: 353px;
         }
         &__icon{
             img{
                 width: 35px;
             }
-        }
-        
+        } 
     }
-
+}
+@media (max-width: 575px){
+    .header{
+        flex-direction: column;
+        &__official{
+            margin-top: 17px;
+        }
+        &__contacts{
+            margin-top: 17px;
+        }
+    }
+    .promo__icons{
+        flex-direction: column;
+        align-items: center;
+        height: 250px;
+        margin-top: 25px;
+        width: 100%;
+    }
+    .promo__icon{
+        margin-top: 17px;
+    }
 }
