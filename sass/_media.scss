@@ -1,0 +1,24 @@
+@media (max-width: 980px){
+    .container{
+        padding: 0 15px;
+    }
+}
+@media (max-width: 767px){
+    .header__logo{
+        width: 190px;
+    }
+    .header__official{
+        font-size: 10px;
+        span{
+            font-size: 15px;
+        }
+    }
+    .header__phone{
+        font-size: 15px;
+    }
+    .button{
+        font-size: 10px;
+        width: 130px;
+        height: 25px;
+    }
+}
