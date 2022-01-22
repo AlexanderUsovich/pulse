@@ -9,13 +9,13 @@
     }
     &__official{
         font-weight: 500;
-        font-size: 12px;
+        font-size: .86rem;
         text-align: center;
         color: #FFFFFF;
         span{
             display: block;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 1.29rem;
             line-height: 1.6;
             text-align: center;
             color: #FFFFFF;
@@ -29,7 +29,7 @@
     &__phone{
         display: block;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 1.29rem;
         text-align: right;
         color: #FFFFFF;
         &:hover{

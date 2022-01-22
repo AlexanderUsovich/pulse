@@ -1,7 +1,7 @@
 .button{
     display: block;
     font-weight: 500;
-    font-size: 12px;
+    font-size: .86rem;
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -14,12 +14,12 @@
         width: 303px;
         height: 50px;
         margin-top: 65px;
-        font-size: 16px;
+        font-size: 1.14rem;
     }
     &_submit{
         width: 100%;
         margin-top: 20px;
         height: 58px;
-        font-size: 16px;
+        font-size: 1.14rem;
     }
 }

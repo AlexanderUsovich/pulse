@@ -1,19 +1,24 @@
-body{
-    font-size: 14px;
+html{
+   font-size: 14px; 
 }
+body{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'MuseoModerno', cursive;
+}
+
+a{
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}
+
 .container{
     max-width: 950px;
     margin: 0 auto;
     //border: 1px solid red;
 }
 
-@import "mixins";
-@import "variables";
-@import "media";
-@import "blocks/promo";
-@import "blocks/header";
-@import "blocks/button";
-@import "blocks/title";
-@import "blocks/advantages";
-@import "blocks/consultation";
-@import "blocks/feed-form";

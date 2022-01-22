@@ -10,14 +10,14 @@
     }
     &__header{
         font-weight: bold;
-        font-size: 42px;
+        font-size: 3rem;
         text-align: right;
         text-transform: uppercase;
         color: #FFFFFF;   
     }
     &__subheader{
         font-weight: 500;
-        font-size: 24px;
+        font-size: 1.71rem;
         text-align: right;
         text-transform: uppercase;
         color: #FFFFFF;
@@ -37,20 +37,20 @@
         align-items: center;
         justify-content: space-between;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 1rem;
         text-align: center;
         color: #FFFFFF;
     }
     &__link {
         font-weight: 500;
-        font-size: 16px;
-        line-height: 25px;
+        font-size: 1.14rem;
+        line-height: 1.56;
         text-align: right;
         color: #FFFFFF;
         margin-top: 12px;
         a {
-            font-size: 16px;
-            line-height: 25px;
+            font-size: 1.14rem;
+            line-height: 1.56;
             text-decoration-line: underline;
             color: #FFFFFF;
             text-transform: uppercase;

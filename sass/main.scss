@@ -1,20 +1,11 @@
-body{
-    font-family: 'Roboto', sans-serif;
-    font-family: 'MuseoModerno', cursive;  
-}
-
-a{
-    text-decoration: none;
-}
-
-*{
-    margin: 0;
-	padding: 0;
-	box-sizing: border-box; 
-}
-	
-
 @import "mixins";
 @import "variables";
-@import "general";
 @import "media";
+@import "general";
+@import "promo";
+@import "header";
+@import "button";
+@import "title";
+@import "advantages";
+@import "consultation";
+@import "feed-form";
