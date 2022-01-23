@@ -22,3 +22,24 @@ a{
     //border: 1px solid red;
 }
 
+.slick-dots{
+    list-style: none;
+    display: flex !important;
+    justify-content: center;
+    li{
+        margin: 0 7px;
+        button{
+            font-size: 0;
+            width: 15px;
+            height: 15px;
+            background-color: black;
+            border-radius: 50%; 
+            border: none;
+        }
+    }
+    .slick-active button{
+        background-color: #00f;
+}
+}
+
+
