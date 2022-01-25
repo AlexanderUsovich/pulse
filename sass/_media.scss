@@ -89,12 +89,16 @@
         width: 100%;
         max-width: 300px;
     }
-    .carousel__inner{
-        width: 100%;
-        img{
-            max-width: 300px;
+    .carousel{
+        padding-bottom: 120px;
+        &__inner{
+            width: 100%;
+            img{
+                max-width: 300px;
+            }
         }
     }
+    
     .catalog-item__descr{
         padding-right: 20px;
     }
