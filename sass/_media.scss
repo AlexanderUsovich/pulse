@@ -1,4 +1,9 @@
-
+@media (max-width: 1200px){
+    .footer__info{
+        top:auto;
+        bottom: 0;
+    }
+}
 @media (max-width: 992px){
     .carousel__inner img{
         width: 100%;
@@ -65,15 +70,12 @@
 @media (max-width: 575px){
     .header{
         flex-direction: column;
-        &__official{
-            margin-top: 17px;
-        }
-        &__contacts{
-            margin-top: 17px;
+        &__official, &__contacts{
+            display: none;
         }
     }
-    .promo__header, .promo__subheader {
-        text-align: center;
+    .promo{
+        padding-bottom: 70px;
     }
     .promo__icons{
         flex-direction: column;
@@ -85,12 +87,20 @@
     .promo__icon{
         margin-top: 17px;
     }
+    .promo__wrapper{
+        align-items: center;
+        margin-top: 70px;
+    }
     .button_main{
         width: 100%;
         max-width: 300px;
+        margin-top: 50px;
+    }
+    .promo__link{
+        margin-top: 10px;
     }
     .carousel{
-        padding-bottom: 120px;
+        padding-bottom: 70px;
         &__inner{
             width: 100%;
             img{
@@ -98,7 +108,21 @@
             }
         }
     }
-    
+
+    .consultation{
+        padding: 70px 0;
+        &__title, &__subtitle{
+            text-align: center;
+        }
+    }
+
+    .feed-form{
+        margin: 0 auto;
+    }
+
+    .catalog{
+        padding-bottom: 70px;
+    }
     .catalog-item__descr{
         padding-right: 20px;
     }
@@ -117,9 +141,16 @@
     .catalog__tab{
         margin: 5px 10px;
     }
+    .client__descr{
+        margin-top: 25px;
+    }
 }
 @media (max-width: 460px){
     .footer__info{
         width: 100%;
+        top:auto;
+        bottom: 0;
+        padding: 25px 15px 25px;
+        height: 230px;
     }
 }
