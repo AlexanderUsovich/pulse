@@ -5,10 +5,15 @@
         height: 54px;
         background: #FFFFFF;
         margin-top: 11px;
+        border:none;
         border-radius: 5px;
         width: 100%;
         font-weight: normal;
         font-size: 1rem;
         padding: 0 20px;
+    }
+    &_modal{
+        margin: 0 auto;
+        margin-top: 26px;
     }
 }

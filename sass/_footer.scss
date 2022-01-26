@@ -26,7 +26,7 @@
         margin-top: 36px;
         color: #FFFFFF;
         &:hover{
-            color: #FFFFFF;
+            color: #0f0;
         }
     }
     &__social{
@@ -35,8 +35,9 @@
         justify-content: center;
         img{
             margin: 0 15px;
+            border-radius: 50%;
             &:hover{
-                box-shadow: 0 0 8px blue;
+                box-shadow: 0 0 15px orange;
             }
         }
     }

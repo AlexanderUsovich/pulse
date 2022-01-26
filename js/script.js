@@ -39,4 +39,37 @@ $(document).ready(function () {
     toggleClass('.catalog-item__link');
     toggleClass('.catalog-item__back');
 
+    //Modal
+    $('[data-modal=cons]').on('click', function() {
+        $('.overlay, #cons').fadeIn("slow");
+    });
+
+    $('.close').on('click', function() {
+        $('.overlay, #cons, #thanks, #order').fadeOut('slow');
+    });
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function(){
+            $('#order .modal__subtitle').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });  
+    });
+
+
+
+
+    //Закрытие модального окна нажатием на окружающее пространство
+    $(window).on('click', function (e) {
+        if (e.target.classList.contains('overlay')) {
+            $('.overlay, #cons, #thanks, #order').fadeOut('slow');
+        }
+    });
+
+    //Закрытие модального окна нажатием на Esc
+    $(document).keyup(function (e) {
+        if (e.keyCode === 27) {   // esc
+            $('.overlay, #cons, #thanks, #order').fadeOut('slow');
+        }
+    });
+
 });
