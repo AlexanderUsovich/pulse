@@ -2,8 +2,8 @@ $(document).ready(function () {
     $('.carousel__inner').slick({
         speed: 1200,
         adaptiveHeight: false,
-        prevArrow: '<button type="button" class="slick-prev"><img src="img/Slide/Icons/left.png" alt="" /></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="img/Slide/Icons/right.png" alt="" /></button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src="icons/Slide-ic/left.png" alt="" /></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="icons/Slide-ic/right.png" alt="" /></button>',
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
@@ -15,9 +15,6 @@ $(document).ready(function () {
                     arrows: false
                 }
             },
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 
@@ -32,7 +29,7 @@ $(document).ready(function () {
             $(this).on('click', function (e) {
                 e.preventDefault();
                 $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-                $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+                $('.catalog-item__list-wrapper').eq(i).toggleClass('catalog-item__list-wrapper_active');
             })
         });
     }
@@ -55,9 +52,6 @@ $(document).ready(function () {
         });  
     });
 
-
-
-
     //Закрытие модального окна нажатием на окружающее пространство
     $(window).on('click', function (e) {
         if (e.target.classList.contains('overlay')) {
@@ -72,4 +66,93 @@ $(document).ready(function () {
         }
     });
 
+    //Валидация форм
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                email: {
+                    required: true,
+                    email: true,
+                },
+                phone: "required",
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, укажите Ваше имя",
+                    minlength: jQuery.validator.format("Введите не менее {0} символов!")
+                },
+                email: {
+                    required: "Укажите Ваш email",
+                    email: "Укажите правильный email",
+                },
+                phone: "Укажите Ваш номер телефона",
+            }
+        });
+    }
+    validateForms('#cons form');
+    validateForms('#order form');
+    validateForms('#consultation-form');
+
+    //Маска ввода
+    $("input[name=phone]").mask("+375(99) 999-99-99");
+    
+    //Отправка форм
+    $('form').submit(function(e) {
+        e.preventDefault();
+        if (!$(this).valid()){
+            return;
+        }
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#cons, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    //Появление стрелки после прокрутки на 1600px
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1600) {
+            $('#pageup').fadeIn();
+        } else {
+            $('#pageup').fadeOut();
+        }
+        $('.client').each(function () {
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow + 650) {
+                $(this).addClass("animate__fadeInUpBig");
+
+            }
+        });
+        $('.catalog-item').each(function () {
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow + 650) {
+                $(this).addClass("animate__fadeIn");
+
+            }
+        });
+    });
+
+
+    //Плавный скролл
+    $("a[href = #up]").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top + "px"});
+        return false;
+    })
+
+    document.addEventListener('touchstart', { passive: true });
+
 });
+
