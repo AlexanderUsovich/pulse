@@ -1,0 +1,58 @@
+.overlay{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .56);
+}
+.close{
+    font-size: 51px;
+    line-height: 51px;
+    color: $main_color;
+    position: absolute;
+    top: -16px;
+    right: -42px;
+    cursor: pointer;
+}
+.modal{
+    width: 382px;
+    // min-height: 402px;
+    background: #F2F2F2;
+    padding: 35px 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__title{
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 19px;
+        text-align: center;
+        color: #0D0D0D;
+    }
+    &__subtitle{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        color: #0D0D0D;
+        margin-top: 10px;
+    }
+    .error{
+        border: 1px solid red;
+        margin-bottom: 5px;
+    }
+    label.error{
+        border: none;
+        text-align: center;
+        display: block;
+    }
+}
+ 
+#thanks .modal__subtitle{
+    line-height: 22px;
+    
+}
+.overlay, #cons, #order, #thanks{
+    display: none;
+}

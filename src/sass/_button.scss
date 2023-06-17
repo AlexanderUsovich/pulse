@@ -1,0 +1,32 @@
+.button{
+    display: block;
+    font-weight: 500;
+    font-size: .86rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: $main_color;
+    border-radius: 5px;
+    width: 153px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    &_main{
+        width: 300px;
+        height: 50px;
+        margin-top: 65px;
+        font-size: 1.14rem;
+    }
+    &_submit{
+        width: 100%;
+        margin-top: 20px;
+        height: 58px;
+        font-size: 1.14rem;
+    }
+     &_mini{
+        width: 135px;
+        height: 44px;
+        font-size: 14px;
+        line-height: 44px;
+    }
+}

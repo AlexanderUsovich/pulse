@@ -1,0 +1,28 @@
+.consultation{
+    background: url(../img/Forms-consultation/bg2.jpg) no-repeat center/cover;
+    padding: 100px 0 108px;
+    &__title{
+        font-weight: bold;
+        font-size: 2.57rem;
+        line-height: 1.5;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    &__subtitle{
+        font-weight: 500;
+        font-size: 1.43rem;
+        line-height: 1.5;
+        color: #FFFFFF;
+        margin-top: 10px;
+    }
+    .error{
+        border: 1px solid red;
+        margin-bottom: 5px;
+    }
+    label.error{
+        border: none;
+        text-align: center;
+        display: block;
+        color: #fff;
+    }
+}

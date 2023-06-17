@@ -1,0 +1,40 @@
+.client{
+    display: flex;
+    margin-top: 60px;
+    .animate__fadeInUpBig:nth-child(2){
+        animation-delay: .3s;
+    }
+    .animate__fadeInUpBig:nth-child(3){
+        animation-delay: .5s;
+    }
+    .animate__fadeInUpBig:nth-child(4){
+        animation-delay: .7s;
+    }
+    img{
+        width: 169px;
+        height: 169px;
+    }
+    &__descr{
+        max-width: 680px;
+        margin-left: 60px;
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+        color: #0D0D0D;
+    }
+    &__subtitle{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #646464;
+        margin-bottom: 10px;
+    }
+    &__paragraph{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0D0D0D;
+    }
+}
